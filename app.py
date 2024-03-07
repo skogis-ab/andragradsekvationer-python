@@ -11,6 +11,7 @@ c = float(input("Ange c: "))
 D = b**2 - 4*a*c # D står för Diskriminanten
 if D == 0:
     print("Dubbelrot, ett nollställe")
+    print("x = ", -b/(2*a))
 elif D < 0: 
     print("Inga reela rötter")
 elif D > 0:
@@ -19,6 +20,8 @@ elif D > 0:
     # Rötter
     x1 = (-b - numpy.sqrt(D))/(2*a)
     x2 = (-b + numpy.sqrt(D))/(2*a)
+    print("x = ", x1)
+    print("x = ", x2)
 
 # Grafuträkning av andragradsekvationen    
 räknaGraf = input("Vill du räkna med graf? y/n:")
