@@ -48,3 +48,5 @@ else:
     # Om vill du inte vill räkna med graf - n (nej)
     print("Programmet avslutas")
     sys.exit()
+
+# Hjälp från Viktor & Filip S från TE23E
