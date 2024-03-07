@@ -1,5 +1,5 @@
 import sys #sys.exit() för att avsluta programmet
-import numpy as np
+import numpy
 import matplotlib.pyplot as plt
 print("Andragradsekvation ska anges i form av ax^2 + bx + c = 0")
 
@@ -11,12 +11,14 @@ c = float(input("Ange c: "))
 D = b**2 - 4*a*c # D står för Diskriminanten
 if D == 0:
     print("Dubbelrot, ett nollställe")
+elif D < 0: 
+    print("Inga reela rötter")
 elif D > 0:
     print("Två nollställen")
-    
+
     # Rötter
-    x1 = (-b - np.sqrt(D))/(2*a)
-    x2 = (-b + np.sqrt(D))/(2*a)
+    x1 = (-b - numpy.sqrt(D))/(2*a)
+    x2 = (-b + numpy.sqrt(D))/(2*a)
 
 # Grafuträkning av andragradsekvationen    
 räknaGraf = input("Vill du räkna med graf? y/n:")
@@ -26,7 +28,7 @@ if räknaGraf == "y":
     def f(x, a, b, c):
         return a * x**2 + b * x + c # Allmäna formen (ax^2 + bx + c)
     
-    xlist = np.linspace(-10, 10, 1000) # Skapar en lista med 1000 värden mellan -10 och 10
+    xlist = numpy.linspace(-10, 10, 1000) # Skapar en lista med 1000 värden mellan -10 och 10
     ylist = f(xlist, a, b, c) # Skapar ett y-värde för varje x-värde    
 
     # Modulen som ritar grafen och självaste grafen
