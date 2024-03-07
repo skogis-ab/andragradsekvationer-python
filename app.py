@@ -1,4 +1,4 @@
-import sys  # sys.exit() för att avsluta programmet
+import sys  # sys.exit() för att avsluta programmet - EJ MED I GUIDEN
 import numpy
 import matplotlib.pyplot as plt
 
@@ -24,8 +24,8 @@ elif D < 0:
     print("Inga reela rötter")
 
 # Grafuträkning av andragradsekvationen, observera att frågan om man vill räkna med graf eller inte ej är med i guiden.
-räknaGraf = input("Vill du visa en graf? y/n:")
-if räknaGraf == "y":
+räknaGraf = input("Vill du visa en graf? y/n:") # EJ MED I GUIDEN
+if räknaGraf == "y": # EJ MED I GUIDEN
 
     # Funktion som räknar ut Y med respektive variabel
     def f(x, a, b, c):
@@ -45,9 +45,10 @@ if räknaGraf == "y":
     plt.legend()
     plt.grid(True)  # Lägger till ett rutsystem som grafen visas i
     plt.show()  # Denna visar grafen
-else:
-    # Om vill du inte vill räkna med graf - n (nej)
-    print("Programmet avslutas")
-    sys.exit()
+
+else: # EJ MED I GUIDEN
+    # Om vill du inte vill räkna med graf - EJ MED I GUIDEN
+    print("Programmet avslutas") # EJ MED I GUIDEN
+    sys.exit() # EJ MED I GUIDEN
 
 # Hjälp från Viktor & Filip S från TE23E
