@@ -12,7 +12,8 @@ c = float(input("Ange c: "))
 D = b**2 - 4 * a * c
 if D == 0:
     print("Dubbelrot, ett nollställe")
-    print("x = ", -b / (2 * a))  # Nollstället / roten
+    x1 = (-b + numpy.sqrt(D)) / (2 * a)
+    print("x = ", x1)  # Nollstället / roten
 elif D > 0:
     print("Två nollställen")
     x1 = (-b - numpy.sqrt(D)) / (2 * a)  # Första nollstället / första roten
