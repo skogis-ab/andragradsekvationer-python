@@ -3,6 +3,6 @@
 
  Om du letar efter källkoden så finner du all kod (och lite till) i [app.py](https://github.com/skogis-ab/andragradsekvationer-python/blob/main/app.py) filen.
 
-
+____
 
 > Av Filip S och Viktor i TE23E
