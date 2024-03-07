@@ -23,7 +23,7 @@ elif D < 0:
     print("Inga reela rötter")
 
 # Grafuträkning av andragradsekvationen, observera att frågan om man vill räkna med graf eller inte ej är med i guiden.
-räknaGraf = input("Vill du räkna med graf? y/n:")
+räknaGraf = input("Vill du visa en graf? y/n:")
 if räknaGraf == "y":
 
     # Funktion som räknar ut Y med respektive variabel
