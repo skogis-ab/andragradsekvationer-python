@@ -1,21 +1,37 @@
 import sys  # sys.exit() för att avsluta programmet - EJ MED I GUIDEN
+import os # för att rensa terminalen - EJ MED I GUIDEN
 import numpy
 import matplotlib.pyplot as plt
 
+def clear(): # EJ MED I GUIDEN
+    return os.system('cls' if os.name == 'nt' else 'clear') # EJ MED I GUIDEN
+
+clear() # EJ MED I GUIDEN
 print("Andragradsekvationen ska anges enligt: ax² + bx + c = 0")
 
 a = float(input("Ange a: "))
 b = float(input("Ange b: "))
 c = float(input("Ange c: "))
+clear() # EJ MED I GUIDEN
 
-# Här kollar vi nollställen och min/max punkter - D står för Diskriminanten
-D = b**2 - 4 * a * c
+# Här kollar vi nollställen, min/max punkter samt symetrilinjen 
+xsym = -b/(2*a) # symetrilinjen
+print("Symetrilinjen har x =", xsym)
+
+extrempunkt = a*xsym**2 + b*xsym + c # Extrempunkten per formlen ax² + bx + c där x är symetrilinjen
+if a > 0:
+    print("Minimipunkt: ", "(",xsym,",", extrempunkt,")")
+elif a < 0:
+    maxipunkt = a*xsym**2 + b*xsym + c
+    print("Maximipunkt: ", "(",xsym,",", extrempunkt,")")
+    
+D = b**2 - 4 * a * c # D står för Diskriminant, per formeln b² - 4ac
 if D == 0:
-    print("Dubbelrot, ett nollställe")
+    print("Ett nollställe:")
     x1 = (-b + numpy.sqrt(D)) / (2 * a)
     print("x = ", x1)  # Nollstället / roten
 elif D > 0:
-    print("Två nollställen")
+    print("Två nollställen:")
     x1 = (-b - numpy.sqrt(D)) / (2 * a)  # Första nollstället / första roten
     x2 = (-b + numpy.sqrt(D)) / (2 * a)  # Andra nollstället / andra roten
     print("x = ", x1)
@@ -29,7 +45,7 @@ if räknaGraf == "y": # EJ MED I GUIDEN
 
     # Funktion som räknar ut Y med respektive variabel
     def f(x, a, b, c):
-        return a * x**2 + b * x + c  # Allmäna formen (ax^2 + bx + c)
+        return a * x**2 + b * x + c  # Allmäna formen (ax² + bx + c)
 
     xlist = numpy.linspace(
         -10, 10, 1000
